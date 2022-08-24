@@ -127,16 +127,16 @@ const Test = ({ route }) => {
                         setTimeout(() => {
                             navigation.navigate('Result')
                         }, 60000)
-                        for(let i = 1; i < 61; i++){
-                            setTimeout(()=>{
-                                setClock(clock-i)
-                            },999*i)
+                        for (let i = 1; i < 61; i++) {
+                            setTimeout(() => {
+                                setClock(clock - i)
+                            }, 1000 * i)
                         }
                     }
                     setTolerance(true)
                     checkAnswer(value)
                     setValue('')
-                    load2() 
+                    load2()
                 }}
             >
                 {tolerance == false ? <Text style={styles.start}>Start</Text> : <Text style={styles.textEsen}>Next</Text>}
@@ -194,10 +194,10 @@ const styles = StyleSheet.create({
     },
     timeout: {
         marginTop: 100,
-        width:145,
+        width: 145,
         textAlign: 'center',
         fontSize: 52,
-        fontWeight: '600', 
+        fontWeight: '600',
         color: 'brown',
         padding: 30,
         borderColor: 'yellow',
