@@ -130,7 +130,7 @@ const Test = ({ route }) => {
                         for(let i = 1; i < 61; i++){
                             setTimeout(()=>{
                                 setClock(clock-i)
-                            },1000*i)
+                            },999*i)
                         }
                     }
                     setTolerance(true)
