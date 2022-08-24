@@ -7,21 +7,21 @@ const Result = () => {
     const navigation = useNavigation()
     const [correctAnswer, setCorrectAnswer] = useState('')
     const [wrongAnswer, setWrongAnswer] = useState('')
-    const load1 = async()=>{
+    const load1 = async () => {
         try {
             let ochko = await AsyncStorage.getItem('correctAnswer')
             setCorrectAnswer(ochko)
-        }catch (err) {
+        } catch (err) {
             alert(err)
         }
     }
-    
-    const load2 = async()=>{
+
+    const load2 = async () => {
         try {
             let ochko = await AsyncStorage.getItem('wrongAnswer')
             // console.log(ochko,'qwer');
             setWrongAnswer(ochko)
-        }catch (err) {
+        } catch (err) {
             alert(err)
         }
     }
@@ -34,13 +34,13 @@ const Result = () => {
             <Text style={styles.text1}>Correct answer : {correctAnswer}</Text>
             <Text style={styles.text2}>Wrong answer : {wrongAnswer}</Text>
             <TouchableOpacity style={styles.button}
-            onPress={()=>{
-                navigation.navigate('Menu')
-            }}
+                onPress={() => {
+                    navigation.navigate('Menu')
+                }}
             >
                 <Text style={styles.text}>Back to menu</Text>
             </TouchableOpacity>
-            
+
         </View>
 
     )
